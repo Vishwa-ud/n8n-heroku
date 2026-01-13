@@ -22,6 +22,10 @@ export DB_POSTGRESDB_DATABASE=$N8N_DB_DATABASE
 export DB_POSTGRESDB_USER=$N8N_DB_USER
 export DB_POSTGRESDB_PASSWORD=$N8N_DB_PASSWORD
 
+# Enable SSL for PostgreSQL (required by Heroku)
+export DB_POSTGRESDB_SSL_ENABLED=true
+export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
+
 # parse REDIS_URL if present
 if [ "$REDIS_URL" ]
 then 
