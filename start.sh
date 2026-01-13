@@ -41,6 +41,7 @@ then
 	# Check if URL starts with rediss://
 	if [ "${N8N_REDIS_SCHEME}" = "rediss" ]; then
 		export QUEUE_BULL_REDIS_TLS=true
+		export QUEUE_BULL_REDIS_TLS_REJECT_UNAUTHORIZED=false
 		echo "Redis connection over TLS detected, setting QUEUE_BULL_REDIS_TLS=true"
 	fi
 fi
